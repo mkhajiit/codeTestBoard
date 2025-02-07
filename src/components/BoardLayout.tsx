@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import BasicOperation from './contents/BasicOperation.tsx';
 
 const Layout = styled.div`
   width: 80%;
@@ -14,7 +15,7 @@ const Layout = styled.div`
 function BoardLayout() {
   return (
     <Layout>
-      <h1>Testing...</h1>
+      <BasicOperation />
     </Layout>
   );
 }
