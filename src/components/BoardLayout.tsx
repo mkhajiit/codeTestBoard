@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import BasicOperation from './contents/BasicOperation.tsx';
+import BasicOperationAnother from './contents/BasicOperationAnother.tsx';
 
 const Layout = styled.div`
   width: 80%;
