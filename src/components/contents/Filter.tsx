@@ -1,6 +1,6 @@
 //배열에 들어갈 숫자를 입력 받고 배수를 입력받아서 필터링 되도록 만들어라
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 function Filter() {
   const [myArr, setMyArr] = useState<number[]>([]);
