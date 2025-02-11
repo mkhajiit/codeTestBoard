@@ -1,8 +1,10 @@
 // 컨탠츠 폴더에 있는 컴포넌트를 임포트해서 사용하세요
 import React from 'react';
 import styled from 'styled-components';
-import Filter from './contents/Filter.tsx';
 
+import AdvancedBasicOperation from './contents/AdvancedBasicOperation.tsx';
+
+// 스타일드 컴포넌트
 const Layout = styled.div`
   width: 80%;
   height: 60%;
@@ -16,7 +18,7 @@ const Layout = styled.div`
 function BoardLayout() {
   return (
     <Layout>
-      <Filter />
+      <AdvancedBasicOperation />
     </Layout>
   );
 }
