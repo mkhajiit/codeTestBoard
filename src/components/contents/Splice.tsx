@@ -1,20 +1,9 @@
 // Filter 말고 Splice나 indexOf를 활용해서 주어진 배열에서 조건에 맞지않는 단어를 제거하기
 // 결론 filter 쓰는게 훨씬 편하고 원본의 불변성을 유지할 수 있음
 import React, { useState } from 'react';
+import MyTestCase from '../../constants/myTestCase.ts';
 
 function Splice() {
-  const MyTestCase = [
-    'mind',
-    'enjoy',
-    'require',
-    'admit',
-    'permit',
-    'aim',
-    'give up',
-    'hope',
-    'postpone',
-  ];
-
   const incorrectCase = ['require', 'permit', 'aim', 'hope'];
 
   const [testCase, setTestCase] = useState<string[]>(MyTestCase);
