@@ -3,17 +3,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BoardLayout from '../components/BoardLayout.tsx';
 import SearchItem from '../components/contents/SearchItem.tsx';
 
-function router() {
+function Router() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<BoardLayout />} />
-          <Route path='/contents/:param' element={<SearchItem />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<BoardLayout />} />
+        <Route path='/contents/:param' element={<SearchItem />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default router;
+export default Router;

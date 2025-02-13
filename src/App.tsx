@@ -1,6 +1,6 @@
 import React from 'react';
-import BoardLayout from './components/BoardLayout.tsx';
 import styled from 'styled-components';
+import Router from './router/Router.tsx';
 
 const Container = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <BoardLayout />
+      <Router />
     </Container>
   );
 }

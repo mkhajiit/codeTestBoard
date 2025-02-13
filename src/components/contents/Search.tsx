@@ -3,16 +3,19 @@
 
 import React, { useState } from 'react';
 import MyTestCase from '../../constants/myTestCase.ts';
+import { Link } from 'react-router-dom';
 
 function Search() {
   const [itemList, setItemList] = useState<string[]>(MyTestCase);
   const [input, setInput] = useState<string>('');
 
+  // 검색 기능 함수
   const searchItem = (input: string) => {
     console.log(input);
     setItemList((prev) => prev.filter((element) => element.includes(input)));
   };
 
+  // 상태를 reset하는 함수
   const resetList = (originalList: string[]) => {
     setItemList(originalList);
     setInput('');
@@ -23,7 +26,9 @@ function Search() {
       <h1>원하는 항목을 검색해보세요</h1>
       <ul>
         {itemList.map((element, index) => (
-          <li key={index}>{element}</li>
+          <li key={index}>
+            <Link to={`/contents/${element}`}>{element}</Link>
+          </li>
         ))}
       </ul>
       <input value={input} onChange={(event) => setInput(event.target.value)}></input>
