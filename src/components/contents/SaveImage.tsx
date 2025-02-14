@@ -10,12 +10,21 @@ function SaveImage() {
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(event.target.value);
   };
+
+  const handleDownload = () => {
+    const blob = new Blob([text], { type: 'text/plain' });
+    const aTag = document.createElement('a');
+    aTag.href = URL.createObjectURL(blob); // blob 객체를 다운로드할수 있는 임시url을 제공;
+    aTag.download = 'memoFromApp.txt';
+    aTag.click();
+  };
   return (
     <div>
       <h1>메모장에 저장할 텍스트 입력하세요</h1>
       <label htmlFor='input'>메모장에 저장할 텍스트: </label>
       <br />
       <textarea id='input' value={text} onChange={handleChange} rows={10} cols={50} />
+      <button onClick={handleDownload}>저장</button>
     </div>
   );
 }
