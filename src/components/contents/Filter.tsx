@@ -1,4 +1,4 @@
-//배열에 들어갈 숫자를 입력 받고 배수를 입력받아서 필터링 되도록 만들어라
+// 배열에 들어갈 숫자를 입력 받고 배수를 입력받아서 필터링 되도록 만들어라
 
 import React, { useState } from 'react';
 
@@ -12,6 +12,7 @@ function Filter() {
     setInputNumber(Number(event.target.value));
   };
 
+  // 배열에 값을 추가하는 함수
   const insertClickHandler = (inputNumber: number) => {
     setMyArr((prev) => {
       const newArr = [...prev, inputNumber];
@@ -19,6 +20,7 @@ function Filter() {
     });
   };
 
+  // 입력된 배수에 따라 배열을 필터링 하는 함수
   const filterClickHandler = (multiple: number) => {
     setFinalResult(myArr.filter((number) => number !== 0 && number % multiple === 0));
   };
